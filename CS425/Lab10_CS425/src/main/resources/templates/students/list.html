@@ -1,0 +1,91 @@
+
+<!--</html>-->
+<!doctype html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <style>
+        .table thead th {
+            text-align: left;
+            white-space: nowrap;
+        }
+    </style>
+
+    <title>HomePage</title>
+</head>
+
+<body>
+<header th:replace="~{fragments/header :: header}"></header>
+
+<main role="main" class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-12"> <!-- Increase the column size to maximum -->
+            <div class="text-center mt-5">
+                <hr/>
+                <h2>Students</h2>
+                <table class="table table-striped">
+                    <thead>
+                    <tr>
+                        <th scope="col">Student ID</th>
+                        <th scope="col">Student Number</th>
+                        <th scope="col">First Name</th>
+                        <th scope="col">Middle Name</th>
+                        <th scope="col">Last Name</th>
+                        <th scope="col">CGPA</th>
+                        <th scope="col">Enrollment Date</th>
+                        <th scope="col">Is International</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr th:each="student, iterStat : ${studentssss}">
+                        <td th:text="${student.studentId}"></td>
+                        <td th:text="${student.studentNumber}"></td>
+                        <td th:text="${student.firstName}"></td>
+                        <td th:text="${student.middleName}"></td>
+                        <td th:text="${student.lastName}"></td>
+                        <td th:text="${student.cgpa}"></td>
+                        <td th:text="${student.enrollmentDate}"></td>
+                        <td th:text="${student.isInternational}"></td>
+
+                        <td>
+                            <a th:href="@{'/eregistrar/students/edit/{studentId}'(studentId=${student.studentId})}" class="btn btn-sm btn-info">
+                                <i class="fa-regular fa-pen-to-square"></i> Edit
+                            </a>
+                        </td>
+                        <td>
+                            <a th:href="@{'/eregistrar/students/delete/{studentId}'(studentId=${student.studentId})}" class="btn btn-sm btn-danger">
+                                <i class="fa-solid fa-delete-left"></i> Delete
+                            </a>
+                            <!-- a data-toggle="modal" data-target="#confirmDeleteBookModal" th:href="@{'/elibrary/book/delete/' + ${book.bookId}}">Delete</a> -->
+                            <!-- <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter"> -->
+                            <!--    Launch demo modal -->
+                            <!-- </button> -->
+                        </td>
+                    </tr>
+                    <tr th:if="${studentssss.size() < 1}">
+                        <td colspan="8" th:align="center">No Registered Students</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</main>
+
+<!--Optional JavaScript-->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"  crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" crossorigin="anonymous"></script>
+
+</body>
+
+</html>

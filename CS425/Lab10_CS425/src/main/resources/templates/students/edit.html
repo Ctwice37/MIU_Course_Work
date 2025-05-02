@@ -1,0 +1,289 @@
+<!--&lt;!&ndash;<!doctype html>&ndash;&gt;-->
+<!--&lt;!&ndash;<html lang="en" xmlns:th="https://www.thymeleaf.org">&ndash;&gt;-->
+
+<!--&lt;!&ndash;<head>&ndash;&gt;-->
+<!--&lt;!&ndash;    &lt;!&ndash; Required meta tags &ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;    <meta charset="utf-8">&ndash;&gt;-->
+<!--&lt;!&ndash;    <meta name="viewport" content="width=device-width, initial-scale=1">&ndash;&gt;-->
+
+<!--&lt;!&ndash;    &lt;!&ndash; Bootstrap CSS &ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">&ndash;&gt;-->
+
+<!--&lt;!&ndash;    <title>Edit Student</title>&ndash;&gt;-->
+<!--&lt;!&ndash;</head>&ndash;&gt;-->
+
+<!--&lt;!&ndash;<body>&ndash;&gt;-->
+<!--&lt;!&ndash;<header th:replace="~{fragments/header :: header}"></header>&ndash;&gt;-->
+
+<!--&lt;!&ndash;<main role="main" class="container">&ndash;&gt;-->
+<!--&lt;!&ndash;    <div class="row justify-content-center">&ndash;&gt;-->
+<!--&lt;!&ndash;        <div class="col-md-8">&ndash;&gt;-->
+<!--&lt;!&ndash;            <div class="text-center mt-5">&ndash;&gt;-->
+
+<!--&lt;!&ndash;                <div class="container">&ndash;&gt;-->
+<!--&lt;!&ndash;                    <form id="editForm" method="post" action="/eregistrar/students/update" th:object="${student}">&ndash;&gt;-->
+<!--&lt;!&ndash;                        <fieldset>&ndash;&gt;-->
+<!--&lt;!&ndash;                        <div class="form-group">&ndash;&gt;-->
+
+<!--&lt;!&ndash;                            <input type="hidden" class="form-control" name="studentId" id="studentId" th:value="${student.studentId}"/>&ndash;&gt;-->
+<!--&lt;!&ndash;                        </div>&ndash;&gt;-->
+
+
+<!--&lt;!&ndash;                        <div class="form-group">&ndash;&gt;-->
+<!--&lt;!&ndash;                            <label for="studentNumber">Student Number</label>&ndash;&gt;-->
+<!--&lt;!&ndash;                            <input type="text" class="form-control" name="studentNumber" id="studentNumber" th:value="${student.studentNumber}" placeholder="Enter student number" autofocus>&ndash;&gt;-->
+<!--&lt;!&ndash;                        </div>&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;                            use feild for nested object&ndash;&gt;&ndash;&gt;-->
+
+<!--&lt;!&ndash;                        <div class="form-group">&ndash;&gt;-->
+<!--&lt;!&ndash;                            <label for="firstName">First Name</label>&ndash;&gt;-->
+<!--&lt;!&ndash;                            <input type="text" class="form-control" id="firstName" th:field="${student.firstName}" placeholder="Enter first name">&ndash;&gt;-->
+<!--&lt;!&ndash;                        </div>&ndash;&gt;-->
+
+<!--&lt;!&ndash;                        <div class="form-group">&ndash;&gt;-->
+<!--&lt;!&ndash;                            <label for="middleName">Middle Name</label>&ndash;&gt;-->
+<!--&lt;!&ndash;                            <input type="text" class="form-control" id="middleName" th:field="${student.middleName}" placeholder="Enter middle name">&ndash;&gt;-->
+<!--&lt;!&ndash;                        </div>&ndash;&gt;-->
+
+<!--&lt;!&ndash;                        <div class="form-group">&ndash;&gt;-->
+<!--&lt;!&ndash;                            <label for="lastName">Last Name</label>&ndash;&gt;-->
+<!--&lt;!&ndash;                            <input type="text" class="form-control" id="lastName" th:field="${student.lastName}" placeholder="Enter last name">&ndash;&gt;-->
+<!--&lt;!&ndash;                        </div>&ndash;&gt;-->
+
+<!--&lt;!&ndash;                        <div class="form-group">&ndash;&gt;-->
+<!--&lt;!&ndash;                            <label for="cgpa">CGPA</label>&ndash;&gt;-->
+<!--&lt;!&ndash;                            <input type="number" step="0.01" class="form-control" id="cgpa" th:field="${student.cgpa}" placeholder="Enter CGPA">&ndash;&gt;-->
+<!--&lt;!&ndash;                        </div>&ndash;&gt;-->
+
+<!--&lt;!&ndash;                        <div class="form-group">&ndash;&gt;-->
+<!--&lt;!&ndash;                            <label for="enrollmentDate">Enrollment Date</label>&ndash;&gt;-->
+<!--&lt;!&ndash;                            <input type="date" class="form-control" id="enrollmentDate" th:field="${student.enrollmentDate}">&ndash;&gt;-->
+<!--&lt;!&ndash;                        </div>&ndash;&gt;-->
+
+<!--&lt;!&ndash;                        <div class="form-group">&ndash;&gt;-->
+<!--&lt;!&ndash;                            <label for="isInternational">Is International?</label>&ndash;&gt;-->
+<!--&lt;!&ndash;                            <select class="form-control" id="isInternational" th:field="${student.isInternational}">&ndash;&gt;-->
+<!--&lt;!&ndash;                                <option value="Yes">Yes</option>&ndash;&gt;-->
+<!--&lt;!&ndash;                                <option value="No">No</option>&ndash;&gt;-->
+<!--&lt;!&ndash;                            </select>&ndash;&gt;-->
+<!--&lt;!&ndash;                        </div>&ndash;&gt;-->
+
+<!--&lt;!&ndash;                        <button type="submit" class="btn btn-primary">Update</button>&ndash;&gt;-->
+<!--&lt;!&ndash;                        </fieldset>&ndash;&gt;-->
+<!--&lt;!&ndash;                    </form>&ndash;&gt;-->
+
+<!--&lt;!&ndash;                </div>&ndash;&gt;-->
+
+
+
+<!--&lt;!&ndash;            </div>&ndash;&gt;-->
+<!--&lt;!&ndash;        </div>&ndash;&gt;-->
+<!--&lt;!&ndash;    </div>&ndash;&gt;-->
+<!--&lt;!&ndash;</main>&ndash;&gt;-->
+
+<!--&lt;!&ndash;&lt;!&ndash; Optional JavaScript &ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash; jQuery first, then Popper.js, then Bootstrap JS &ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"  crossorigin="anonymous"></script>&ndash;&gt;-->
+<!--&lt;!&ndash;<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"  crossorigin="anonymous"></script>&ndash;&gt;-->
+<!--&lt;!&ndash;<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"  crossorigin="anonymous"></script>&ndash;&gt;-->
+
+<!--&lt;!&ndash;</body>&ndash;&gt;-->
+
+<!--&lt;!&ndash;</html>&ndash;&gt;-->
+
+
+
+<!--<!doctype html>-->
+<!--<html lang="en" xmlns:th="https://www.thymeleaf.org">-->
+<!--<head>-->
+<!--    &lt;!&ndash; Required meta tags &ndash;&gt;-->
+<!--    <meta charset="utf-8">-->
+<!--    <meta name="viewport" content="width=device-width, initial-scale=1">-->
+
+<!--    &lt;!&ndash; Bootstrap CSS &ndash;&gt;-->
+<!--    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">-->
+
+<!--    <title>Edit Student</title>-->
+<!--</head>-->
+<!--<body>-->
+<!--<header th:replace="~{fragments/header :: header}"></header>-->
+
+<!--<main role="main" class="container">-->
+<!--    <div class="row justify-content-center">-->
+<!--        <div class="col-md-8">-->
+<!--            <div class="card mt-5 shadow-lg">-->
+<!--                <div class="card-body">-->
+<!--                    <h1 class="text-center">Edit Student</h1>-->
+<!--                    <h2 class="text-center mt-3 mb-5">[<span th:text="${student.firstName + ' ' + student.lastName}">]</span></h2>-->
+
+<!--                    <form id="editForm" method="post" action="/eregistrar/students/update" th:object="${student}">-->
+<!--                        <input type="hidden" class="form-control" name="studentId" id="studentId" th:value="${student.studentId}"/>-->
+
+<!--                        <div class="form-group row">-->
+<!--                            <label for="studentNumber" class="col-sm-2 col-form-label">Student Number</label>-->
+<!--                            <div class="col-sm-10">-->
+<!--                                <input type="text" class="form-control" name="studentNumber" id="studentNumber" th:value="${student.studentNumber}" placeholder="Enter student number" autofocus>-->
+<!--                            </div>-->
+<!--                        </div>-->
+
+
+<!--                <div class="form-group row">-->
+<!--                    <label for="firstName" class="col-sm-2 col-form-label">First Name</label>-->
+<!--                    <div class="col-sm-10">-->
+<!--                        <input type="text" class="form-control" id="firstName" th:field="${student.firstName}" placeholder="Enter first name">-->
+<!--                    </div>-->
+<!--                </div>-->
+
+<!--                <div class="form-group row">-->
+<!--                    <label for="middleName" class="col-sm-2 col-form-label">Middle Name</label>-->
+<!--                    <div class="col-sm-10">-->
+<!--                        <input type="text" class="form-control" id="middleName" th:field="${student.middleName}" placeholder="Enter middle name">-->
+<!--                    </div>-->
+<!--                </div>-->
+
+<!--                <div class="form-group row">-->
+<!--                    <label for="lastName" class="col-sm-2 col-form-label">Last Name</label>-->
+<!--                    <div class="col-sm-10">-->
+<!--                        <input type="text" class="form-control" id="lastName" th:field="${student.lastName}" placeholder="Enter last name">-->
+<!--                    </div>-->
+<!--                </div>-->
+
+<!--                <div class="form-group row">-->
+<!--                    <label for="cgpa" class="col-sm-2 col-form-label">CGPA</label>-->
+<!--                    <div class="col-sm-10">-->
+<!--                        <input type="number" step="0.01" class="form-control" id="cgpa" th:field="${student.cgpa}" placeholder="Enter CGPA">-->
+<!--                    </div>-->
+<!--                </div>-->
+
+<!--                <div class="form-group row">-->
+<!--                    <label for="enrollmentDate" class="col-sm-2 col-form-label">Enrollment Date</label>-->
+<!--                    <div class="col-sm-10">-->
+<!--                        <input type="date" class="form-control" id="enrollmentDate" th:field="${student.enrollmentDate}">-->
+<!--                    </div>-->
+<!--                </div>-->
+
+<!--                <div class="form-group row">-->
+<!--                    <label for="isInternational" class="col-sm-2 col-form-label">Is International?</label>-->
+<!--                    <div class="col-sm-10">-->
+<!--                        <select class="form-control" id="isInternational" th:field="${student.isInternational}">-->
+<!--                            <option value="Yes">Yes</option>-->
+<!--                            <option value="No">No</option>-->
+<!--                        </select>-->
+<!--                    </div>-->
+<!--                </div>-->
+
+<!--                <button type="submit" class="btn btn-primary float-right">Update</button>-->
+<!--                    </form>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </div>-->
+<!--</main>-->
+
+<!--&lt;!&ndash; Optional JavaScript &ndash;&gt;-->
+<!--&lt;!&ndash; jQuery first, then Popper.js, then Bootstrap JS &ndash;&gt;-->
+<!--<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"  crossorigin="anonymous"></script>-->
+<!--<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"  crossorigin="anonymous"></script>-->
+<!--<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"  crossorigin="anonymous"></script>-->
+
+<!--</body>-->
+<!--</html>-->
+
+
+
+<!doctype html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+
+    <title>Edit Student</title>
+</head>
+<body>
+<header th:replace="~{fragments/header :: header}"></header>
+
+<main role="main" class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="card mt-5 shadow-lg">
+                <div class="card-body">
+                    <h1 class="text-center">Edit Student</h1>
+                    <h2 class="text-center mt-3 mb-5">[<span th:text="${student.firstName + ' ' + student.lastName}">]</span></h2>
+
+                    <form id="editForm" method="post" action="/eregistrar/students/update" th:object="${student}">
+                        <input type="hidden" class="form-control" name="studentId" id="studentId" th:value="${student.studentId}"/>
+
+                        <div class="form-group row">
+                            <label for="studentNumber" class="col-md-4 col-form-label">Student Number</label>
+                            <div class="col-md-8">
+                                <input type="text" class="form-control" name="studentNumber" id="studentNumber" th:value="${student.studentNumber}" placeholder="Enter student number" autofocus>
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label for="firstName" class="col-md-4 col-form-label">First Name</label>
+                            <div class="col-md-8">
+                                <input type="text" class="form-control" id="firstName" th:field="${student.firstName}" placeholder="Enter first name">
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label for="middleName" class="col-md-4 col-form-label">Middle Name</label>
+                            <div class="col-md-8">
+                                <input type="text" class="form-control" id="middleName" th:field="${student.middleName}" placeholder="Enter middle name">
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label for="lastName" class="col-md-4 col-form-label">Last Name</label>
+                            <div class="col-md-8">
+                                <input type="text" class="form-control" id="lastName" th:field="${student.lastName}" placeholder="Enter last name">
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label for="cgpa" class="col-md-4 col-form-label">CGPA</label>
+                            <div class="col-md-8">
+                                <input type="number" step="0.01" class="form-control" id="cgpa" th:field="${student.cgpa}" placeholder="Enter CGPA">
+                            </div>
+                        </div>
+
+
+                        <div class="form-group row">
+                            <label for="dateOfEnrollment" class="col-md-4 col-form-label">Date of Enrollment</label>
+                            <div class="col-md-8">
+                                <input type="date" class="form-control" id="dateOfEnrollment" th:field="${student.enrollmentDate}">
+                            </div>
+                        </div>
+
+
+                        <div class="form-group row">
+                            <label for="isInternational" class="col-md-4 col-form-label">Is International?</label>
+                            <div class="col-md-8">
+                                <select class="form-control" id="isInternational" th:field="${student.isInternational}">
+                                    <option value="Yes">Yes</option>
+                                    <option value="No">No</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary float-right">Update</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"  crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"  crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"  crossorigin="anonymous"></script>
+
+</body>
+</html>

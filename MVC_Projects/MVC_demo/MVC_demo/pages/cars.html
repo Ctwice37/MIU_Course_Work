@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        #heading button {
+
+            display: flexbox;
+            margin-left: 15px;
+        }
+
+        #heading button {
+            background-color: white;
+            border: 1px;
+        }
+
+
+
+
+    </style>
+</head>
+
+<body>
+
+    <div style="margin-top: 10px">
+        <nav id="heading">
+            <button>HomeButton</button>
+            <button id="carsForSale" onclick="onClick()" onmouseover="highlight()">Cars for Sale</button>
+            <button>Research & Reviews</button>
+            <button>News & Video</button>
+            <button>Sell Your Car</button>
+            <button>Service & Repair</button>
+            <button>Sign In</button>
+            <span>/</span>
+            <button style="margin-left: 15px;">Sign Up</button>
+
+        </nav>
+        <hr>
+
+        <div style="display:block">
+            <img src="/car.com/images/carBackground.jpg" alt="">
+        </div>
+
+        <div style="color: #e6e6e6;">
+
+
+
+            <form action="/posts" method="post">
+
+                <div style="display: grid; grid-template-columns: 20% 20% 60%; height: 30px;">
+                   
+                    <select name="new_used">
+                        <option value="newUsedCars">New & used cars</option>
+                        <option value="newCertifiedCars">New & Certified cars</option>
+                        <option value="newCars">New cars</option>
+                        <option value="usedCars">Used cars</option>
+                        <option value="certifiedCars">Certified cars</option>
+
+                        <!-- DataBase Action, populate using: document.createElement('option').innerHtml()-->
+                      </select>
+ 
+                      <select name="make">
+                        <option value="Audio">Audi</option>
+                        <option value="BMW">BMW</option>
+                        <option value="Ford">Ford</option>
+                        <option value="Mercedes">Mercedes</option>
+                        <option value="Telsa">Tesla</option>
+
+                        <!-- DataBase Action, populate using: document.createElement('option').innerHtml()-->
+                      </select>
+
+                      <select name="model">
+                        <option value="n/a">n/a</option>
+                        <option value="n/a">n/a</option>
+                        <option value="n/a">n/a</option>
+                        <option value="n/a">n/a</option>
+                        <option value="n/a">n/a</option>
+
+                        <!-- DataBase Action, populate using: document.createElement('option').innerHtml()-->
+                      </select>
+                
+                </div>
+                <div style="display: grid; grid-template-columns: 20% 20% 15% 45%; height: 30px;">
+                
+                    <!-- <select id="xxx">
+                        <!-- <option value="new_used">New & used cars</option>
+                        <option value="saab">New & Certified cars</option>
+                        <option value="mercedes">New cars</option>
+                        <option value="mercedes">Used cars</option>
+                        <option value="mercedes">Certified cars</option> -->
+
+                        <!-- DataBase Action, populate using: document.createElement('option').innerHtml()-->
+                      <!-- </select> --> 
+
+                      <!-- <select id="xxy">
+                        <!-- <option value="new_used">New & used cars</option>
+                        <option value="saab">New & Certified cars</option>
+                        <option value="mercedes">New cars</option>
+                        <option value="mercedes">Used cars</option>
+                        <option value="mercedes">Certified cars</option> -->
+
+                        <!-- DataBase Action, populate using: document.createElement('option').innerHtml()-->
+                      <!-- </select>  -->
+
+                      <!-- <input type="text" name="zipCode" > -->
+
+                      <input type="submit" value="Add" name="add">
+                      <input type="submit" value="Edit" name="edit">
+                      <input type="submit" value="Delete" name="delete">
+                
+                </div>
+
+
+
+            </form>
+
+        </div>
+
+
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+
+        function onClick(){
+            alert("Yes");
+        }
+
+        function highlight(){
+            document.getElementById('carsForSale').style.backgroundColor="aqua";
+
+        }
+    </script>
+    <style>
+        #heading button{
+
+            display: flexbox;
+            margin-left: 15px;
+        }
+
+        #heading button {
+            background-color: white;
+            border: 1px;
+        }
+
+        #grid {
+
+            border: 1px solid;
+            height: 700px;
+            display: grid;
+            grid-template-columns: 60% auto;
+
+
+        }
+
+        #col1 {
+            border: 1px solid;
+            margin: 40px;
+            padding-left: 10px;
+            
+        }
+
+        #col2 {
+
+            /* border-left: 1px solid; */
+            border: 1px solid;
+            margin: 40px;
+            padding-left: 20px;
+        }
+
+        input {
+
+            border-radius: 4px;
+            margin-bottom: 10px;
+            border: .5px solid;
+            height: 30px;
+            width: 80%;
+            
+        }
+
+        #submit {
+            width: 70%;
+            height: 40px;
+            background-color: #532380;
+            color: white;
+            
+            }
+        #socialMedia {
+            
+            display:flex;
+            justify-content: center;
+            font-size: 20px;
+        }
+
+        #socialBoxes a{
+            border: 1px solid;
+            margin-bottom: 5px;
+            border-radius: 8px;
+            height: 40px;
+            display: flex;
+            justify-content: center;
+            
+
+        }
+
+     
+
+
+
+
+    </style>
+</head>
+<body>
+    <nav id="heading">
+        <button>HomeButton</button>
+        <button id="carsForSale" onclick="onClick()" onmouseover="highlight()">Cars for Sale</button>
+        <button>Research & Reviews</button>
+        <button>News & Video</button>
+        <button>Sell Your Car</button>
+        <button>Service & Repair</button>
+
+
+        <button>Sign In/ Sign Up</button> 
+       
+        
+    </nav>
+
+    <hr>
+
+    <div>
+        <div id="grid">
+            <div id="col1">
+                <h1>Sign in</h1><br><br>
+
+                <div><p>New to Cars.com? <a href="">Sign up.</a> Are you a <a href="">Dealer?</a></p></div>
+                <br><br>
+                <form action="/queries/auth" method="get">
+                    <input type="text" placeholder="Email" name="email"><br>
+                    <input type="password" placeholder="Password" name="password">
+                    <p style="font-size: 12px; margin-top: -3px;">Minimum of eight characters <span style="float: right; margin-right: 60px;"><a href="">Forgot Password?</a></span></p>
+                    <p style="font-size: 10px;">By signing in to your profile, you agree to our <a href="">Privacy Statement</a> and <a href="">Terms of Service.</a></p>
+                
+                    <div style="display: grid; grid-template-columns: 70% auto auto; ">
+                        <input id="submit" type="submit" value="Sign in">
+                        
+                        <input type="checkbox" name="rememberme" id="remember">
+                        <label class="text" for="remember">Remember Me </label>
+                    
+                    </div>
+                    
+                   
+                </form>
+
+
+            </div>
+            <div id="col2">
+                <div id="socialMedia" style="padding: 30px;">
+                <b>Connect On Social</b>
+                </div>
+                <div id="socialBoxes" >
+                
+                    <a id="facebook" href="">Sign in with FaceBook</a>
+                
+                
+                    <a id="google" href="">Sign in with Google</a>
+                
+                
+                    <a id="apple" href="" style="text-align: center;">Sign in with Apple</a>
+             
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>

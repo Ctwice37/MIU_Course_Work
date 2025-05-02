@@ -1,0 +1,15 @@
+PROBLEM STATEMENT
+
+current situtation:
+
+Since the beginning of the pandemic, many classes have moved to an online, or hybrid format. This means lectures are held online, with lectures recorded using programs such as ZOOM, Microsoft Teams. Whether a student attends a class online using Teams, or is attending in-person, the professor's speech is the focus of the student. During a class lecture, the student must similaneously focus on the professor's speech, comprehend the content of the speech, as well as possibly write notes. This strain on the study to concurrently take notes and actively listen is what my application will address. 
+
+Problem Statement:
+
+Student's can only comprehend so much during the live lecture. The challenge for all students is being able to recall pertinent things the professor said during their lecture. Often if a step in a procedure or a caveted remark is missed or misremembered, then the student's overall conception of the subject will be adversely affected. Also, since classroom time is limited, a professor can dedicate only so much time to answering a student's question, and when answered, can only elorborate for so much time before needing to proceed with the lecture. The problem being addressed is to give a student a resource to "re-experience" lectures such that they not only are re-introduced to a concept/topic presented in class, but also given the oppurnity to "interact" with the topic as if the professor were present. Essentially, the problem with lecture is, "once it is said, it become a 'dead' transcipt". The problem my application will seek the solve is how to re-enliven a past lecture.
+
+
+
+Desired Outcome:
+
+I propose a solution for students to be able to review what the professor said during a previous lecture without needing to manually go back into a recorded session and find the appropriate lecture segment. Rather, I since MS Teams generates a transcript per recording, I will compile all transcripts into a database which will make lectures searchable at the student's convenience. As a cruical detail of the technology involved, this application will be utilizing the recent unvieling of Openai's open api for using GPT-4 for personal projects. By ingesting all transcipt text into a format which can be computed by a language model,  the student will be able to search a lecture "semantically." This means that rather than traditional search, where a student would need to recall particular keywords the professor said during lecture in order to find desired content, the student will rather "chat" with the transcripts. Just like ChatGPT, the student will prompt my application on as if it were an agent, rather than feeling like they're querying a database. The desired outcome will hopefully allow a student to gain valuable insight as if they were back inside a lecture, or inside a previously taken course.

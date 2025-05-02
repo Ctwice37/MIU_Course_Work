@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+
+    <title>HomePage</title>
+</head>
+
+<body>
+<header th:replace="~{fragments/header :: header}"></header>
+
+<main role="main" class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="text-center mt-5">
+
+                <div class="container">
+                    <form id="publisherForm" method="post" action="/eregistrar/students/new" th:value="${student}">
+                        <fieldset>
+
+                            <div class="form-group row">
+                                <label for="studentNumber" class="col-sm-4 col-form-label">Student Number</label>
+                                <div class="col-sm-8">
+                                    <input type="text" class="form-control" id="studentNumber" placeholder="Enter student number" name="studentNumber">
+                                </div>
+                            </div>
+
+                            <div class="form-group row">
+                                <label for="firstName" class="col-sm-4 col-form-label">First Name</label>
+                                <div class="col-sm-8">
+                                    <input type="text" class="form-control" id="firstName" placeholder="Enter first name" name="firstName">
+                                </div>
+                            </div>
+
+                            <div class="form-group row">
+                                <label for="middleName" class="col-sm-4 col-form-label">Middle Name</label>
+                                <div class="col-sm-8">
+                                    <input type="text" class="form-control" id="middleName" placeholder="Enter middle name" name="middleName">
+                                </div>
+                            </div>
+
+                            <div class="form-group row">
+                                <label for="lastName" class="col-sm-4 col-form-label">Last Name</label>
+                                <div class="col-sm-8">
+                                    <input type="text" class="form-control" id="lastName" placeholder="Enter last name" name="lastName">
+                                </div>
+                            </div>
+
+                            <div class="form-group row">
+                                <label for="cgpa" class="col-sm-4 col-form-label">CGPA</label>
+                                <div class="col-sm-8">
+                                    <input type="number" step="0.01" class="form-control" id="cgpa" placeholder="Enter CGPA" name="cgpa">
+                                </div>
+                            </div>
+
+                            <div class="form-group row">
+                                <label for="enrollmentDate" class="col-sm-4 col-form-label">Enrollment Date</label>
+                                <div class="col-sm-8">
+                                    <input type="date" class="form-control" id="enrollmentDate" name="enrollmentDate">
+                                </div>
+                            </div>
+
+                            <div class="form-group row">
+                                <label for="isInternational" class="col-sm-4 col-form-label">Is International?</label>
+                                <div class="col-sm-8">
+                                    <select class="form-control" id="isInternational" name="isInternational">
+                                        <option value="Yes">Yes</option>
+                                        <option value="No">No</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="form-group row">
+                                <div class="col-sm-10 offset-sm-2">
+                                    <button type="submit" class="btn btn-primary">Register</button>
+                                </div>
+                            </div>
+
+                        </fieldset>
+                    </form>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+</main>
+
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"  crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"  crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"  crossorigin="anonymous"></script>
+
+</body>
+
+</html>
